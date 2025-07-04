@@ -22,7 +22,8 @@ public:
     bool OpenWdf(const std::wstring& wdfPath);
     void Close();
     bool LoadIndex();
-    bool ExtractFile(const std::wstring& innerName, const std::wstring& outPath, std::wstring& log);
+    // innerName改为std::string，和wpp16一致
+    bool ExtractFile(const std::string& innerNameA, const std::wstring& outPath, std::wstring& log);
     bool ExtractByLst(const std::wstring& lstPath, const std::wstring& outDir, std::vector<std::wstring>& logs, int& success, int& fail);
     size_t GetFileCount() const;
     const std::vector<WDataFileIndex>& GetIndex() const;
