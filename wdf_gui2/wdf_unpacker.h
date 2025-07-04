@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 
 // VS2010 下屏蔽 C4996（安全函数）和 C4819（编码警告）
 #define _CRT_SECURE_NO_WARNINGS
@@ -39,7 +39,7 @@ public:
 
     // 单文件解包：innerNameA 是 .lst 里的窄字符串
     // outPath 是完整的目标路径（宽字符）
-    // log 用于返回 “[Extracted] xxx” 或 “[Not found] xxx”
+    // log 用于返回 "[Extracted] xxx" 或 "[Not found] xxx"
     bool ExtractFile(
         const std::string& innerNameA,
         const std::wstring& outPath,
@@ -64,3 +64,5 @@ private:
     std::wstring             m_wdfPath; // 打开的 WDF 路径
     std::vector<WDataFileIndex> m_Index; // 内存中的索引表
 };
+
+DWORD string_id(const char* str);

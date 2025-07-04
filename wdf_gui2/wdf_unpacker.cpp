@@ -36,7 +36,7 @@ static void string_adjust(char* p) {
 }
 
 // 原版 string_id：x86 汇编哈希算法
-static DWORD string_id(const char* str) {
+DWORD string_id(const char* str) {
     int i;
     unsigned int v;
     static unsigned m[70];
